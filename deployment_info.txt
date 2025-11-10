@@ -1,0 +1,28 @@
+
+PIR ANOMALY DETECTION - DEPLOYMENT PACKAGE
+============================================================
+
+Model Information:
+- Model Size: 3752 bytes (3.66 KB)
+- Input Shape: [1 8]
+- Output Shape: [1 8]
+
+Files for Deployment:
+1. pir_anomaly_model.tflite   - Main model file
+2. scaler_mean.npy             - Feature normalization (mean)
+3. scaler_scale.npy            - Feature normalization (scale)
+4. threshold.npy               - Anomaly detection threshold
+
+Scaler Parameters:
+Mean: [175.85, 6.25, 120.997, 126.6, 133.665, 227.4, 0.29309, 12.25]
+Scale: [195.66534567981117, 7.898575820994568, 218.3743676373214, 215.7657062649206, 173.44992863936267, 186.41469899125445, 0.32610439264137486, 15.974589196595948]
+Threshold: 0.065759
+
+Deployment Steps:
+1. Copy all required files to Raspberry Pi Pico W
+2. Install micropython-tflite (if available)
+3. Use the deployment script to run inference
+
+Note: TFLite for MicroPython is still experimental.
+For production, use the simplified inference approach
+provided in the deployment script.
